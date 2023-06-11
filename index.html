@@ -54,7 +54,7 @@
         <!--Why are we-->
         <section class="why-are-we">
             <div class="container">
-                <h2 class="visually-hidden-title">Why are we</h2>
+                <h2 class="visually-hidden">Why are we</h2>
                 <ul class="why-are-we-list list">
                     <li class="why-are-we-list-item">
                         <div class="why-are-we-icons-box">
@@ -315,7 +315,7 @@
             <div class="footer-form">
                 <p class="form-title">Subscribe</p>
                 <form name="subscribe-form" autocomplete="on" novalidate class="subscribe-form">
-                    <label>
+                    <label class="form-mail">
                         <input type="email" name="email" placeholder="E-mail" class="form-mail-field">
                     </label>
                     <button type="submit" class="subscribe-button">Subscribe <svg class="subscribe-icon" width="24"
@@ -339,7 +339,7 @@
                     <label class="modal-form-mark" for="user-name">Name</label>
                     <div class="modal-form-position">
                         <input type="text" name="user-name" class="modal-form-field" id="user-name">
-                        <svg class="modal-form-icon" width="12" height="12">
+                        <svg class="modal-form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-person"></use>
                         </svg>
                     </div>
@@ -348,7 +348,7 @@
                     <label class="modal-form-mark" for="user-tel">Phone</label>
                     <div class="modal-form-position">
                         <input type="tel" name="user-tel" class="modal-form-field" id="user-tel">
-                        <svg class="modal-form-icon" width="13" height="13">
+                        <svg class="modal-form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-call"></use>
                         </svg>
                     </div>
@@ -357,32 +357,33 @@
                     <label class="modal-form-mark" for="user-mail">Email</label>
                     <div class="modal-form-position">
                         <input type="email" name="user-mail" class="modal-form-field" id="user-mail">
-                        <svg class="modal-form-icon" width="15" height="12">
+                        <svg class="modal-form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-mail"></use>
                         </svg>
                     </div>
                 </div>
                 <div class="modal-form-comment-wrap">
-                    <label for="comment" class="modal-form-mark">Comment
+                    <label for="user-comment" class="modal-form-mark">Comment
                     </label>
-                    <textarea name="comment" id="comment" class="modal-form-comment-field"
+                    <textarea name="user-comment" id="user-comment" class="modal-form-comment-field"
                         placeholder="Text input"></textarea>
                 </div>
-                <div class="modal-agreement-wrap">
-                    <input type="checkbox" name="user-agreement" id="user-agreement"
-                        class="agreement-check visually-hidden-title">
-                    <label for="user-agreement" class="agreement-text">
-                        <span class="agreement-icon-wrap">
-                            <svg class="agreement-icon" width="10" height="8">
+                <div class="modal-privacy-wrap">
+                    <input type="checkbox" name="user-privacy" id="user-privacy" value="true"
+                        class="privacy-check visually-hidden">
+                    <label for="user-privacy" class="privacy-text">
+                        <span class="privacy-icon-wrap">
+                            <svg class="privacy-icon" width="10" height="8">
                                 <use href="./images/icons.svg#icon-consent"></use>
                             </svg>
                         </span>
-                        I accept the terms and conditions of the <a href="#" class="agreement-link">Privacy
+                        I accept the terms and conditions of the <a href="#" class="privacy-link">Privacy
                             Policy</a>
                     </label>
                 </div>
+                <button type="submit" class="send-modal-button">Send</button>
             </form>
-            <button type="submit" class="send-modal-button">Send</button>
+
         </div>
     </div>
     <script src="./js/modal.js"></script>

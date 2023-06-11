@@ -4,7 +4,7 @@ body {
   background-color: var(--white-background);
 }
 
-.visually-hidden-title {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -640,8 +640,9 @@ img {
   border: 1px solid var(--white-background);
   border-radius: 4px;
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   color: var(--white-background);
 }
 .form-mail-field::placeholder {
@@ -651,7 +652,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   min-width: 165px;
   height: 40px;
   font-weight: 500;
@@ -673,6 +673,7 @@ img {
   background-color: var(--success);
 }
 .subscribe-icon {
+  margin-left: 16px;
   fill: var(--white-background);
 }
 /*-------------------------------------MODAL-----------------*/
@@ -754,6 +755,7 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  background-color: transparent;
   color: var(--subtle-text);
 }
 .modal-form-position {
@@ -772,8 +774,6 @@ img {
   border-color: var(--primary-brand);
 }
 .modal-form-icon {
-  width: 18px;
-  height: 24px;
   position: absolute;
   left: 16px;
   top: 50%;
@@ -805,7 +805,11 @@ img {
   border-radius: 4px;
   padding: 8px 16px;
   outline: transparent;
-  /* background-color: transparent; */
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--modal-overlay);
+  background-color: transparent;
   transition-property: border-color;
   transition-duration: var(--dur);
   transition-timing-function: var(--func);
@@ -819,17 +823,17 @@ img {
   letter-spacing: 0.04em;
   color: var(--modal-overlay);
 }
-.modal-agreement-wrap {
+.modal-privacy-wrap {
   margin-bottom: 24px;
 }
 
-.agreement-text {
+.privacy-text {
   font-size: 12px;
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--subtle-text);
 }
-.agreement-icon-wrap {
+.privacy-icon-wrap {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -839,21 +843,17 @@ img {
   border: 1px solid var(--modal-overlay);
   border-radius: 2px;
   background-color: var(--white-background);
-  transition: border var(--dur) var(--func),
-    background-color var(--dur) var(--func);
+  fill: transparent;
+  transition: background-color var(--dur) var(--func),
+    border var(--dur) var(--func) fill var(--dur) var(--func);
 }
-.agreement-check:checked + .agreement-text > .agreement-icon-wrap {
+.privacy-check:checked + .privacy-text > .privacy-icon-wrap {
   border: none;
   background-color: var(--pressed-state);
-}
-.agreement-icon {
-  fill: transparent;
-}
-.agreement-check:checked ~ .agreement-text .agreement-icon {
-  fill: var(--white-background);
+  fill: var(--light);
 }
 
-.agreement-link {
+.privacy-link {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
